@@ -1,0 +1,82 @@
+h1{
+    margin: 2rem 2rem;
+    padding-bottom: 1rem;
+    max-width: 350px;
+    border-bottom: 2px solid #3f34b6;
+    
+}
+.carrossel-container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+
+.films-carrossel{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.arrow-left, .arrow-right{
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    background: none;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    border: none;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 20px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+.arrow-left{
+    left: 0;
+}.arrow-left:hover{
+    opacity: 1;
+    background: linear-gradient(to left, transparent 0%, rgb(24, 24, 24) 200%);
+}
+
+.arrow-right{
+    right: 0;
+}.arrow-right:hover{
+    opacity: 1;
+    background: linear-gradient(to right, transparent 0%, rgb(24, 24, 24) 200%);
+}
+
+.films-carrossel::-webkit-scrollbar{
+    display: none;
+}
+
+.films-carrossel h3, p{
+    margin-top: 5px;
+}
+
+.films-carrossel h3{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.films-carrossel p{
+    color: #b3b3b3;
+}
+
+.item{
+    max-width: 250px;
+    transition: 0.3s;
+    
+}
+
+.item:hover{
+    scale: 102%;
+}
+
+.img-container{
+    margin: 0px 15px;
+}
