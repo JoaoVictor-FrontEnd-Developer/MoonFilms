@@ -1,0 +1,25 @@
+.card{
+    max-width: 200px;
+    
+}
+
+.card>img{
+    width: 100%;
+    transition: 0.3s;
+}
+
+.card>img:hover{
+    scale: 102%;
+}
+
+.card>h3,p{
+    margin-top: 10px;
+}
+
+.card>h3{
+    color: #fff;
+}
+
+.card>p{
+    color: #b3b3b3;
+}

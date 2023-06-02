@@ -17,12 +17,12 @@ function Movie() {
     const response = await axios.get(url);
     const data = await response.data;
     
-    setMovie(data.results.filter(movie => movie.id == params.id)[0]);
-    console.log(data.results.filter(movie => movie.id == params.id)[0])
+    setMovie(data)
+    
   }
 
   useEffect(() => {
-    getMovie(`${moviesURL}${params.category}?${apiKey}`)
+    getMovie(`${moviesURL}${params.id}?${apiKey}`)
   }, [])
   
   

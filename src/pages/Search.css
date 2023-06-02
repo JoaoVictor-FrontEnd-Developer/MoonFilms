@@ -1,0 +1,13 @@
+.search-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+span{
+    color: #3f34b6;
+    text-transform: uppercase;
+}

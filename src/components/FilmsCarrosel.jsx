@@ -49,7 +49,7 @@ function FilmsCarrosel({category, title}) {
                     {topMovies.length === 0 && <p>Carregando...</p>}
                     
                     {topMovies.length > 0 && (topMovies.map(movie => (
-                        <Link className="img-container" key={movie.id} to={`/movie/${category}/${movie.id}`}>
+                        <Link className="img-container" key={movie.id} to={`/movie/${movie.id}`}>
                             <img
                                 className="item current_item"
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
