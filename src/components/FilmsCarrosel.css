@@ -31,8 +31,22 @@ h1{
     color: #ffffff;
     font-size: 30px;
     padding: 20px;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    background-color: #766DF4;
+    display: flex;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icon:hover{
+    scale: 103%;
 }
 
 
@@ -40,14 +54,12 @@ h1{
     left: 0;
 }.arrow-left:hover{
     opacity: 1;
-    background: linear-gradient(to left, transparent 0%, rgb(24, 24, 24) 200%);
 }
 
 .arrow-right{
     right: 0;
 }.arrow-right:hover{
     opacity: 1;
-    background: linear-gradient(to right, transparent 0%, rgb(24, 24, 24) 200%);
 }
 
 .films-carrossel::-webkit-scrollbar{
@@ -74,9 +86,21 @@ h1{
 }
 
 .item:hover{
-    scale: 102%;
+    scale: 103%;
 }
 
 .img-container{
     margin: 0px 15px;
 }
+
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:conic-gradient(#0000 10%,#766DF4);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation:s3 1s infinite linear;
+    margin: auto;
+  }
+
+@keyframes s3 {to{transform: rotate(1turn)}}

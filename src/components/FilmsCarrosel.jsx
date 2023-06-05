@@ -43,10 +43,10 @@ function FilmsCarrosel({category, title}) {
         <div id={`${category}`} className="movies-container">
             <h1 data-aos="fade-right" className="title">{title}</h1>
             <div data-aos="fade-up" className="carrossel-container">
-                <button onClick={handleLeftClick} className="arrow-left"><BsArrowLeftCircle className="icon" /></button>
-                <button onClick={handleRightClick} className="arrow-right"><BsArrowRightCircle className="icon" /></button>
+                <button onClick={handleLeftClick} className="arrow-left"><div className="icon" ><BsArrowLeftCircle/></div></button>
+                <button onClick={handleRightClick} className="arrow-right"><div className="icon" ><BsArrowRightCircle/></div></button>
                 <div className="films-carrossel" ref={carrosel}>
-                    {topMovies.length === 0 && <p>Carregando...</p>}
+                    {topMovies.length === 0 && (<div className="custom-loader"></div>)}
                     
                     {topMovies.length > 0 && (topMovies.map(movie => (
                         <Link className="img-container" key={movie.id} to={`/movie/${movie.id}`}>

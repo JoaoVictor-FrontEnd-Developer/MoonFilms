@@ -25,15 +25,15 @@ function Search() {
 
   useEffect(() => {
     const searchURLMovie = `${searchURL}?${apiKey}&query=${query}`
-    getSearchMovie(searchURLMovie);
+    getSearchMovie(searchURLMovie)
   }, [query])
 
 
   return (<>
     <h1>Resultados para: <span>{query}</span></h1>
     <div className="search-container"> 
-      {!movies && <p>Carregando...</p>}
-      {movies && (
+    {movies.length === 0 && (<div className="custom-loader"></div>)}
+      {movies.length > 0 && (
         movies.map(movie => (
           <MovieCard
             id={movie.id}

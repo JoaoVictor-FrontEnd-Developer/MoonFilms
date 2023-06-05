@@ -22,44 +22,50 @@ function Movie() {
   }
 
   useEffect(() => {
-    getMovie(`${moviesURL}${params.id}?${apiKey}`)
+      getMovie(`${moviesURL}${params.id}?${apiKey}`)
   }, [])
   
   
 
   return (
-      <div className="movie-container" >
-        <img data-aos="fade-right" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="poster_film" />
-        
-      <div className="descrition" data-aos="fade-up" >
-
-          <div className='title-movie'>
-            <h1>{`${movie.title}`}</h1>
-         </div>
-        
-        <div className="info">
-          <div className="info-title">
-            Descrição
-            <div className="icon-info"><BsPencilFill /></div>
+    <>
+      {movie.length === 0 && (<div className="custom-loader"></div>)}
+      {movie.length != 0 && (
+        <div className="movie-container" >
+        <div className="img_container">
+          <img data-aos="fade-right" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="poster_film" />
           </div>
-              <p>{`${movie.overview}`}</p>
-        </div>
+        <div className="descrition" data-aos="fade-up" >
+  
+            <div className='title-movie'>
+              <h1>{`${movie.title}`}</h1>
+           </div>
+          
           <div className="info">
-          <div className="info-title">
-            Data de Lançamento
-            <div className="icon-info"><BsCalendarFill /></div></div>
-            <p>{`${movie.release_date}`}</p>
-        </div>
-        
-          <div className="info">
-          <div className="info-title">
-            Média de Votos
-            <div className="icon-info"><BsStarFill /></div>
+            <div className="info-title">
+              Descrição
+              <div className="icon-info"><BsPencilFill /></div>
+            </div>
+                <p>{`${movie.overview}`}</p>
           </div>
-            <p>{`${movie.vote_average}`}</p>
+            <div className="info">
+            <div className="info-title">
+              Data de Lançamento
+              <div className="icon-info"><BsCalendarFill /></div></div>
+              <p>{`${movie.release_date}`}</p>
           </div>
-        </div>
-        </div>
+          
+            <div className="info">
+            <div className="info-title">
+              Média de Votos
+              <div className="icon-info"><BsStarFill /></div>
+            </div>
+              <p>{`${movie.vote_average}`}</p>
+            </div>
+          </div>
+          </div>
+      )}
+    </>
       
   )
 }

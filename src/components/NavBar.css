@@ -65,7 +65,7 @@
 
 #navbar form>input:focus{
     border-bottom: 1px solid #3f34b6;
-    width: 300px;
+    width: 350px;
 }
 
 #navbar form>button{
@@ -80,4 +80,22 @@
 
 #navbar form>button:hover{
     background-color: #3f34b6;
+}
+
+
+@media screen and (max-width: 700px){
+    #navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #navbar form>input{
+        width: 250px;
+    }
+
+    #navbar form>input:focus{
+        width: 270px;
+    }
 }

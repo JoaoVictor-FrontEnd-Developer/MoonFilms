@@ -6,7 +6,8 @@
 }
 
 body{
-    background: linear-gradient(to bottom, #000000 0%, #241e67 200%);
+    background: linear-gradient(to bottom, #000000 0%, #241e67 100%);
+    background-attachment: fixed;
     color: #fff;
 }
 
