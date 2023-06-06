@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {BsArrowLeftCircle, BsArrowRightCircle} from 'react-icons/bs'
+import {MdOutlineArrowBackIos, MdOutlineArrowForwardIos} from 'react-icons/md'
 import { useState, useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -43,8 +43,8 @@ function FilmsCarrosel({category, title}) {
         <div id={`${category}`} className="movies-container">
             <h1 data-aos="fade-right" className="title">{title}</h1>
             <div data-aos="fade-up" className="carrossel-container">
-                <button onClick={handleLeftClick} className="arrow-left"><div className="icon" ><BsArrowLeftCircle/></div></button>
-                <button onClick={handleRightClick} className="arrow-right"><div className="icon" ><BsArrowRightCircle/></div></button>
+                <button onClick={handleLeftClick} className="arrow-left"><div className="icon" ><MdOutlineArrowBackIos/></div></button>
+                <button onClick={handleRightClick} className="arrow-right"><div className="icon" ><MdOutlineArrowForwardIos/></div></button>
                 <div className="films-carrossel" ref={carrosel}>
                     {topMovies.length === 0 && (<div className="custom-loader"></div>)}
                     
