@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
+import { BiSearchAlt2 } from 'react-icons/bi'
 import './Search.css'
 
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -9,6 +10,17 @@ const searchURL = import.meta.env.VITE_SEARCH;
 import MovieCard from '../components/MovieCard';
 
 function Search() {
+
+    const navigate = useNavigate();
+    const [search, setSearch] = useState('');
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (!search) return
+      
+      navigate(`/Search?q=${search}`)
+      
+    }
 
   const [searchParams] = useSearchParams();
 
@@ -30,7 +42,13 @@ function Search() {
 
 
   return (<>
+    <div className="search_navgate">
     <h1>Resultados para: <span>{query}</span></h1>
+    <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Busque um filme" onChange={(e) => setSearch(e.target.value)}/>
+            <button type="submit"><BiSearchAlt2/></button>
+        </form>
+    </div>
     <div className="search-container"> 
     {movies.length === 0 && (<div className="custom-loader"></div>)}
       {movies.length > 0 && (

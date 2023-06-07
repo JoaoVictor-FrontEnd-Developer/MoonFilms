@@ -1,86 +1,20 @@
 .navContainer{
-    margin-bottom: 20px;
+    background-color: #3f34b6;
 }
 
 .logo{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #3f34b6;
+    color: #fff;
     font-size: 2.5rem;
 }
 
 #navbar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 2rem;
-    margin: 0 auto;
-}
-
-.nav-icons{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    
-}
-
-.nav-icons>ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-}
-
-.nav-icons>ul>li>a{
-    color: #fff;
-    padding: 10px;
-}
-
-.nav-icons>ul>li>a:hover{
-    border-bottom: 2px solid #3f34b6;
-    
-}
-
-
-#navbar form{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#navbar form>input, #navbar form>button{
-    border: none;
-    padding: 10px ;
-    background: none;
-    color: #fff;
-}
-
-#navbar form>input{
-    outline: none;
-    border-bottom: 1px solid #fff;
-    width: 300px;
-    transition: 0.3s;
-}
-
-#navbar form>input:focus{
-    border-bottom: 1px solid #3f34b6;
-    width: 350px;
-}
-
-#navbar form>button{
-    cursor: pointer;
-    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-#navbar form>button:hover{
-    background-color: #3f34b6;
+    padding: 2rem 2rem;
 }
 
 
@@ -90,13 +24,5 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-    }
-
-    #navbar form>input{
-        width: 250px;
-    }
-
-    #navbar form>input:focus{
-        width: 270px;
     }
 }

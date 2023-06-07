@@ -7,6 +7,81 @@
     
 }
 
+.search_navgate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search_navgate form{
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search_navgate form>input, .search_navgate form>button{
+    border: none;
+    padding: 20px;
+}
+
+.search_navgate form>input{
+    font-size: 15px;
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 400px;
+    transition: 0.3s;
+}
+
+.search_navgate form>input:focus{
+    width: 450px;
+}
+
+.search_navgate form>button{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: #3f34b6;
+    color: #fff;
+}
+
+.search_navgate form>button:hover{
+    scale: 105%;
+}
+
+@media screen and (max-width: 700px){
+    .search_navgate{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search_navgate form>input{
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .search_navgate form>input:focus{
+        width: 300px;
+    }
+
+    .search_navgate form>button{
+        font-size: 1.5rem;
+
+    }
+
+    .search_navgate form>input, .search_navgate form>button{
+        border: none;
+        padding: 15px;
+    }
+}
+
 span{
     color: #3f34b6;
     text-transform: uppercase;
