@@ -30,7 +30,7 @@ function FilmsCarrosel({category, title}) {
         const res = await axios.get(url);
         const data = await res.data
 
-        console.log(data.results)
+        // console.log(data.results)
         setTopMovies(data.results)
     }
 

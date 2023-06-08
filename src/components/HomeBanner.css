@@ -27,15 +27,27 @@
 }
 
 .banner{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.img1{
+    background: url(../img/banner1.jpg)center center/cover;
+}
+.img2{
+    background: url(../img/banner2.jpg)center center/cover;
+}
+.img3{
+    background: url(../img/banner3.jpg)center center/cover;
 }
 
 
 .banner>h2{
-    position: absolute;
     font-size: clamp(20px, 8vw, 80px);
 }
 
@@ -44,19 +56,18 @@
     color: #fff;
 }
 
-.banner form{
-    position: absolute;
+.banner .searchFilter form{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.banner form>input, .banner form>button{
+.banner .searchFilter form>input, .banner .searchFilter form>button{
     border: none;
     padding: 25px;
 }
 
-.banner form>input{
+.banner .searchFilter form>input{
     font-size: 25px;
     outline: none;
     background-color: #fff;
@@ -65,11 +76,11 @@
     transition: 0.3s;
 }
 
-.banner form>input:focus{
+.banner .searchFilter form>input:focus{
     width: 700px;
 }
 
-.banner form>button{
+.banner .searchFilter form>button{
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -81,9 +92,39 @@
     color: #fff;
 }
 
-.banner form>button:hover{
+.banner .searchFilter form>button:hover{
     scale: 105%;
 }
+
+.searchFilter{
+    position: relative;
+}
+
+
+.filter-container{
+    background-color: #fff;
+    color: #727272;
+    width: 100%;
+    margin-top:5px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+.filter-container>p{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.filter-container>p:hover{
+    background-color: #cecece;
+}
+
+
+.filter-container::-webkit-scrollbar{
+    display: none;
+}
+
 
 @media screen and (max-width: 700px){
     .banner{
@@ -92,24 +133,37 @@
         align-items: center;
         gap: 10px;
     }
+    
 
-    .banner form>input{
-        width: 200px;
+    .banner .searchFilter form>input{
+        width: 250px;
         font-size: 15px;
     }
 
-    .banner form>input:focus{
+    .banner .searchFilter form>input:focus{
         width: 250px;
     }
 
-    .banner form>button{
+    .banner .searchFilter form>button{
         font-size: 1.5rem;
 
     }
 
-    .banner form>input, .banner form>button{
+    .banner .searchFilter form>input, .banner .searchFilter form>button{
         border: none;
         padding: 15px;
+    }
+
+    .filter-container{
+        width: 250px;
+    }
+
+    .banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 60vh;
     }
 }
 
